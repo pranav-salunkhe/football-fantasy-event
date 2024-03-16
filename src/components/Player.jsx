@@ -9,7 +9,8 @@ import dot from '../assets/dot.png';
 function Player(props) {
   const [arrow, setArrow] = useState(dot);
   const [playerData, setPlayerData] = useState(props.playerData);
-
+  let playerPrice;
+  playerPrice = ((playerData.Defence+playerData.Dribbling+playerData.Pace+playerData.Passing+playerData.Physical+playerData.Shooting)/6)*10000
   useEffect(() => {
     const futureTimestamp = new Date('2024-03-16T03:11:50').getTime(); // Replace with your desired future timestamp
     const currentTime = new Date().getTime();
@@ -64,12 +65,12 @@ function Player(props) {
   }
 
   return (
-    <div key={props.index} className="m-2 rounded-lg flex flex-col justify-center items-center border border-white sm:h-64 sm:w-60 md:h-max md:w-60">
+    <div key={props.index} className="m-2 rounded-lg flex flex-col justify-center items-center border border-white w-44 h-44 sm:h-64 sm:w-60 md:h-max md:w-72">
       <div className='h-full w-full '>
-        <div className='flex sm:w-60 md:w-60 p-4 justify-between absolute'>
-          <div className=' flex flex-col '>
+        <div className='flex sm:w-60 md:w-72 p-4 justify-between absolute'>
+          <div className=' flex flex-col justify-between items-start'>
             <div>{playerData.Overall}</div>
-            <div>{pos}</div>
+            <div className="badge badge-secondary">{pos}</div>
           </div>
           <div className=''>
             <Image
@@ -84,7 +85,7 @@ function Player(props) {
         <Image
           src={imgSrc}
           alt='player'
-          layout="responsive"
+          // layout="responsive"
           height={100}
           width={100}
           className='h-full w-full object-fill'
@@ -98,12 +99,51 @@ function Player(props) {
           <div>{playerData.Shooting} SHO</div>
           <div>{playerData.Passing} PAS</div>
         </div>
-        <div className='h-full w-[3px] bg-white'></div>
+        {/* <div className="stats stats-vertical shadow">
+  
+        <div className="stat px-2 py-1">
+          <div className="stat-title">PAC</div>
+          <div className="stat-value">{playerData.Pace} </div>
+        </div>
+        
+        <div className="stat px-2 py-1">
+          <div className="stat-title">SHO</div>
+          <div className="stat-value">{playerData.Shooting} </div>
+        </div>
+        
+        <div className="stat px-2 py-1">
+          <div className="stat-title">PAS</div>
+          <div className="stat-value">{playerData.Passing} </div>
+        </div>
+        
+      </div> */}
+        <div className="divider lg:divider-horizontal"></div> 
         <div className='flex flex-col'>
           <div>{playerData.Dribbling} DRI</div>
           <div>{playerData.Defence} DEF</div>
           <div>{playerData.Physical} PHY</div>
         </div>
+        {/* <div className="stats stats-vertical shadow">
+  
+        <div className="stat px-2 py-1">
+          <div className="stat-title">DRI</div>
+          <div className="stat-value">{playerData.Dribbling} </div>
+        </div>
+        
+        <div className="stat px-2 py-1">
+          <div className="stat-title">DEF</div>
+          <div className="stat-value">{playerData.Defence} </div>
+        </div>
+        
+        <div className="stat px-2 py-1">
+          <div className="stat-title">PHY</div>
+          <div className="stat-value">{playerData.Physical} </div>
+        </div>
+        
+        </div> */}
+      </div>
+      <div>
+        $ {Math.floor(playerPrice)}
       </div>
     </div>
   )

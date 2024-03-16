@@ -2,7 +2,7 @@ const newsData = [
     {
         "Title": "test news",
         "PlayerAffected": "AchrafHakimi",
-        "Description": "Detailed Description",
+        "Description": "AchrafHakimi is out due to a leg injury",
         "UpdatedStats": {
             "Overall": 78,
             "Pace": 82,
@@ -19,7 +19,7 @@ const newsData = [
     {
         "Title": "test news2",
         "PlayerAffected": "AchrafHakimi",
-        "Description": "Detailed Description",
+        "Description": "AchrafHakimi is out due to a leg injury",
         "UpdatedStats": {
             "Overall": 78,
             "Pace": 82,
@@ -36,7 +36,7 @@ const newsData = [
     {
         "Title": "test news3",
         "PlayerAffected": "AchrafHakimi",
-        "Description": "Detailed Description",
+        "Description": "AchrafHakimi is out due to a leg injury",
         "UpdatedStats": {
             "Overall": 78,
             "Pace": 82,
@@ -53,7 +53,7 @@ const newsData = [
     {
         "Title": "test news4",
         "PlayerAffected": "AchrafHakimi",
-        "Description": "Detailed Description",
+        "Description": "AchrafHakimi is out due to a leg injury",
         "UpdatedStats": {
             "Overall": 78,
             "Pace": 82,
@@ -70,7 +70,7 @@ const newsData = [
     {
         "Title": "Real News",
         "PlayerAffected": "AlphonsoDavies",
-        "Description": "Detailed Description",
+        "Description": "AchrafHakimi is out due to a leg injury",
         "UpdatedStats": {
             "Overall": 78,
             "Pace": 82,
@@ -87,7 +87,7 @@ const newsData = [
     {
         "Title": "AymericLaporte out",
         "PlayerAffected": "AymericLaporte",
-        "Description": "Detailed Description",
+        "Description": "AchrafHakimi is out due to a leg injury",
         "UpdatedStats": {
             "Overall": 78,
             "Pace": 82,

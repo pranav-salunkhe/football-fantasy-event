@@ -6,7 +6,7 @@ export default function Dashboard() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-4">
       <div>Players Available</div>
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 lg:gap-x-12 lg:gap-y-12">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-x-12 lg:gap-y-12">
         {fifaPlayers.map((player, index) =>(
           <Player 
             key={index}

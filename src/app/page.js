@@ -4,7 +4,7 @@ import istenitklogo from '../assets/istenitk.png';
 import Image from 'next/image';
 export default function Home() {
   return (
-    <div className=' flex flex-col justify-center items-center h-screen w-screen'>
+    <div className=' flex flex-col justify-start items-center h-screen w-screen'>
         <div className='w-56 h-56 flex justify-center items-end bg-slate-200 rounded-3xl relative top-20'>   
             <Image 
                 src={homeMbappe}

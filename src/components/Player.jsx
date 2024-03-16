@@ -65,9 +65,9 @@ function Player(props) {
   }
 
   return (
-    <div key={props.index} className="m-2 bg-neutral rounded-tr-badge rounded-bl-badge shadow-md shadow-warning rounded-lg flex flex-col justify-center items-center border border-white w-48 h-max sm:h-64 sm:w-60 md:h-max md:w-72">
+    <div key={props.index} className="m-2 bg-neutral rounded-tr-badge rounded-bl-badge shadow-md shadow-warning rounded-lg flex flex-col justify-center items-center border border-white w-36 h-max sm:h-64 sm:w-60 md:h-max md:w-72">
       <div className='h-full w-full '>
-        <div className='flex w-48 sm:w-60 md:w-72 p-2 md:p-4 justify-between absolute'>
+        <div className='flex w-36 sm:w-60 md:w-72 p-2 md:p-4 justify-between absolute'>
           <div className=' flex flex-col justify-between items-start text-sm sm:text-md md:text-lg lg:text-xl '>
             <div>{playerData.Overall}</div>
             <div className="badge badge-secondary">{pos}</div>
@@ -92,7 +92,7 @@ function Player(props) {
 
         />
       </div>
-      <div className="font-bold lg:text-xl text-accent">{playerData.Name}</div>
+      <div className="font-bold text-sm lg:text-xl text-accent">{playerData.Name}</div>
       <div className='flex flex-row w-full h-full justify-evenly items-center'>
         <div className='flex flex-col'>
           <div className='border-b-[1px] border-gray-500 text-secondary'>{playerData.Pace} <span className='opacity-30'>PAC</span></div>

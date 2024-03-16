@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Nav from "../components/Nav";
+import NewNav from "@/components/NewNav";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -13,8 +14,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-      <Nav />
-      <div className="min-h-screen flex justify-center items-center p-24">
+      <NewNav />
+      <div className="min-h-screen bg-accent-content flex justify-center items-center p-4">
       {children}
       </div>
       </body>

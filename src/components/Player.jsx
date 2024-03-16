@@ -98,7 +98,7 @@ function Player(props) {
           <div>{playerData.Shooting} SHO</div>
           <div>{playerData.Passing} PAS</div>
         </div>
-        <div className='h-full w-[1px] bg-white'></div>
+        <div className='h-full w-[3px] bg-white'></div>
         <div className='flex flex-col'>
           <div>{playerData.Dribbling} DRI</div>
           <div>{playerData.Defence} DEF</div>

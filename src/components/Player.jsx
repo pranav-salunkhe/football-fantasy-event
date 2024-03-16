@@ -65,39 +65,43 @@ function Player(props) {
   }
 
   return (
-    <div key={props.index} className="m-2 rounded-lg flex flex-col justify-center items-center border border-white w-44 h-44 sm:h-64 sm:w-60 md:h-max md:w-72">
+    <div key={props.index} className=" bg-neutral rounded-t-3xl rounded-b-badge rounded-lg flex flex-col justify-center items-center border border-white w-48 h-max sm:h-64 sm:w-60 md:h-max md:w-72">
       <div className='h-full w-full '>
-        <div className='flex sm:w-60 md:w-72 p-4 justify-between absolute'>
-          <div className=' flex flex-col justify-between items-start'>
-            <div>{playerData.Overall}</div>
-            <div className="badge badge-secondary">{pos}</div>
-          </div>
-          <div className=''>
+        <div className='flex w-48 mt-6 sm:w-60 md:w-72 p-2 md:p-4 justify-between absolute'>
+          <div className=' flex flex-col justify-between items-start text-sm sm:text-md md:text-lg lg:text-xl '>
+            <div className='flex'>
+            <p className='my-2'>{playerData.Overall}</p>
             <Image
               src={arrow}
               alt='stats'
               height={24}
               width={24}
               quality={100}
+              className='m-2'
             />
+            </div>
+            <div className="badge badge-secondary">{pos}</div>
+          </div>
+          <div className=''>
+
           </div>
         </div>
-        <Image
+        <img
           src={imgSrc}
           alt='player'
           // layout="responsive"
-          height={100}
-          width={100}
+          // height={100}
+          // width={100}
           className='h-full w-full object-fill'
 
         />
       </div>
-      <div className="font-bold text-xl">{playerData.Name}</div>
+      <div className="font-bold lg:text-xl text-accent">{playerData.Name}</div>
       <div className='flex flex-row w-full h-full justify-evenly items-center'>
         <div className='flex flex-col'>
-          <div>{playerData.Pace} PAC</div>
-          <div>{playerData.Shooting} SHO</div>
-          <div>{playerData.Passing} PAS</div>
+          <div className='border-b-[1px] border-gray-500 text-secondary'>{playerData.Pace} <span className='opacity-30'>PAC</span></div>
+          <div className='border-b-[1px] border-gray-500 text-secondary'>{playerData.Shooting} <span className='opacity-30'>SHO</span></div>
+          <div className='border-b-[1px] border-gray-500 text-secondary'>{playerData.Passing} <span className='opacity-30'>PAS</span></div>
         </div>
         {/* <div className="stats stats-vertical shadow">
   
@@ -119,9 +123,9 @@ function Player(props) {
       </div> */}
         <div className="divider lg:divider-horizontal"></div> 
         <div className='flex flex-col'>
-          <div>{playerData.Dribbling} DRI</div>
-          <div>{playerData.Defence} DEF</div>
-          <div>{playerData.Physical} PHY</div>
+          <div className='border-b-[1px] border-gray-500 text-secondary'>{playerData.Dribbling} <span className='opacity-30'>DRI</span></div>
+          <div className='border-b-[1px] border-gray-500 text-secondary'>{playerData.Defence} <span className='opacity-30'>DEF</span></div>
+          <div className='border-b-[1px] border-gray-500 text-secondary'>{playerData.Physical} <span className='opacity-30'>PHY</span></div>
         </div>
         {/* <div className="stats stats-vertical shadow">
   
@@ -142,9 +146,10 @@ function Player(props) {
         
         </div> */}
       </div>
-      <div>
+      <div className='m-2 p-2 rounded-xl bg-success'>
         $ {Math.floor(playerPrice)}
       </div>
+    {/* <div className='h-[200px] w-[200px] rotate-45 bg-black'></div> */}
     </div>
   )
 }

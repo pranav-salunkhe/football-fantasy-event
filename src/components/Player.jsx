@@ -65,25 +65,21 @@ function Player(props) {
   }
 
   return (
-    <div key={props.index} className=" bg-neutral rounded-t-3xl rounded-b-badge rounded-lg flex flex-col justify-center items-center border border-white w-48 h-max sm:h-64 sm:w-60 md:h-max md:w-72">
+    <div key={props.index} className="m-2 bg-neutral rounded-tr-badge rounded-bl-badge shadow-md shadow-warning rounded-lg flex flex-col justify-center items-center border border-white w-48 h-max sm:h-64 sm:w-60 md:h-max md:w-72">
       <div className='h-full w-full '>
-        <div className='flex w-48 mt-6 sm:w-60 md:w-72 p-2 md:p-4 justify-between absolute'>
+        <div className='flex w-48 sm:w-60 md:w-72 p-2 md:p-4 justify-between absolute'>
           <div className=' flex flex-col justify-between items-start text-sm sm:text-md md:text-lg lg:text-xl '>
-            <div className='flex'>
-            <p className='my-2'>{playerData.Overall}</p>
+            <div>{playerData.Overall}</div>
+            <div className="badge badge-secondary">{pos}</div>
+          </div>
+          <div className=''>
             <Image
               src={arrow}
               alt='stats'
               height={24}
               width={24}
               quality={100}
-              className='m-2'
             />
-            </div>
-            <div className="badge badge-secondary">{pos}</div>
-          </div>
-          <div className=''>
-
           </div>
         </div>
         <img
@@ -149,7 +145,6 @@ function Player(props) {
       <div className='m-2 p-2 rounded-xl bg-success'>
         $ {Math.floor(playerPrice)}
       </div>
-    {/* <div className='h-[200px] w-[200px] rotate-45 bg-black'></div> */}
     </div>
   )
 }

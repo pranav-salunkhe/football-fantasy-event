@@ -44,7 +44,7 @@ export default function Dashboard() {
             placeholder="Search player..."
             className="border m-2 border-gray-300 text-black rounded-md py-2 px-4 w-full sm:w-64"
           />
-          <div className="grid grid-cols-2 sm:grid-cols-3 items-center justify-center">
+          <div className="grid grid-cols-2 sm:grid-cols-4 items-center justify-center">
           <button
             onClick={handleSearch}
             className=" bg-blue-500 m-2 text-white px-4 py-2 rounded-md hover:bg-blue-600"

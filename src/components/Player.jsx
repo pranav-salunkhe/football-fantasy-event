@@ -9,7 +9,7 @@ import dot from '../assets/dot.png';
 function Player(props) {
   const [arrow, setArrow] = useState(dot);
   const [playerData, setPlayerData] = useState(props.playerData);
-  const [playerPrice, setPlayerPrice] = useState(((playerData.Defence+playerData.Dribbling+playerData.Pace+playerData.Passing+playerData.Physical+playerData.Shooting)/6)*10000)
+  const [playerPrice, setPlayerPrice] = useState(playerData.Price);
   useEffect(() => {
     const futureTimestamp = new Date('2024-03-16T03:11:50').getTime(); // Replace with your desired future timestamp
     const currentTime = new Date().getTime();
@@ -21,8 +21,13 @@ function Player(props) {
   useEffect(() => {
     // Check for news affecting this player when the component mounts
     const checkForNews = () => {
-      const filteredNews = newsData.filter(news => news.PlayerAffected === playerData.Name);
-
+      // const filteredNews = newsData.filter(news => news.PlayerAffected === playerData.Name);
+      const filteredNews = newsData.filter(news => {
+        const newsTimestamp = new Date(news.timestamp).getTime();
+        const currentTime = new Date().getTime();
+        return news.PlayerAffected === playerData.Name && newsTimestamp < currentTime;
+      });
+    
       if (filteredNews.length === 0 ) {
         setArrow(dot);
         return;

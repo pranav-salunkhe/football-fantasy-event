@@ -23,7 +23,9 @@ function News() {
     <p className='m-2'>News</p>
 </div>
       <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 p-4 gap-8'>
-        {filteredNews.map((data, index) => (
+        {filteredNews
+            .filter(data => data.Title !== "skip")
+            .map((data, index) => (
           <div key={index} className='flex flex-col text-xl rounded-xl bg-neutral p-10'>
             <div className='flex justify-between items-start'>
                 <p className='text-xl'>{data.Title}</p>

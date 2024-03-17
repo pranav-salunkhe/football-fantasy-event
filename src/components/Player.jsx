@@ -9,8 +9,7 @@ import dot from '../assets/dot.png';
 function Player(props) {
   const [arrow, setArrow] = useState(dot);
   const [playerData, setPlayerData] = useState(props.playerData);
-  let playerPrice;
-  playerPrice = ((playerData.Defence+playerData.Dribbling+playerData.Pace+playerData.Passing+playerData.Physical+playerData.Shooting)/6)*10000
+  const [playerPrice, setPlayerPrice] = useState(((playerData.Defence+playerData.Dribbling+playerData.Pace+playerData.Passing+playerData.Physical+playerData.Shooting)/6)*10000)
   useEffect(() => {
     const futureTimestamp = new Date('2024-03-16T03:11:50').getTime(); // Replace with your desired future timestamp
     const currentTime = new Date().getTime();
@@ -19,34 +18,105 @@ function Player(props) {
       setArrow(down);
     }
   }, []);
-
   useEffect(() => {
-    const filteredNews = newsData.filter(data => {
-      const newsTimestamp = new Date(data.timestamp).getTime();
-      const currentTime = new Date().getTime();
-      return currentTime >= newsTimestamp;
-    });
+    // Check for news affecting this player when the component mounts
+    const checkForNews = () => {
+      const filteredNews = newsData.filter(news => news.PlayerAffected === playerData.Name);
 
-    // Find the latest news affecting this player
-    const latestNews = filteredNews.find(news => news.PlayerAffected === playerData.Name);
+      if (filteredNews.length === 0 ) {
+        setArrow(dot);
+        return;
+      }
 
-    // If there's no latest news, do nothing
-    if (!latestNews || latestNews.UpdatedStats.Overall === playerData.Overall) {
-      setArrow(dot);
-      return;
-    }
-    
-    // Determine whether to show the up arrow or the down arrow
-    if (latestNews.NewPrice < playerData.Price) {
-      setArrow(down);
-    }else{
-      setArrow(up);
-    }
-    // Update the player's data based on the latest news
-    const updatedPlayerData = { ...playerData, ...latestNews.UpdatedStats };
-    setPlayerData(updatedPlayerData);
+      // Find the latest news affecting this player
+      const latestNews = filteredNews.reduce((latest, news) => {
+        const newsTimestamp = new Date(news.timestamp).getTime();
+        const latestTimestamp = new Date(latest.timestamp).getTime();
+        return newsTimestamp > latestTimestamp ? news : latest;
+      });
 
-  }, 6000); // Only re-run this effect when playerData changes
+      // Determine whether to show the up arrow or the down arrow
+      if (latestNews.UpdatedStats.Overall < playerData.Overall) {
+        setArrow(down);
+      } else {
+        setArrow(up);
+      }
+
+      setPlayerPrice(latestNews.NewPrice);
+      // Update the player's data based on the latest news
+      const updatedPlayerData = { ...playerData, ...latestNews.UpdatedStats };
+      setPlayerData(updatedPlayerData);
+    };
+
+    checkForNews();
+
+    // Set up interval to periodically check for news every 6 seconds
+    const intervalId = setInterval(checkForNews, 6000);
+
+    return () => clearInterval(intervalId);
+  }, []);
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     const filteredNews = newsData.filter(data => {
+  //       const newsTimestamp = new Date(data.timestamp).getTime();
+  //       const currentTime = new Date().getTime();
+  //       return currentTime >= newsTimestamp;
+  //     });
+  
+  //     // Find the latest news affecting this player
+  //     const latestNews = filteredNews.find(news => news.PlayerAffected.includes(playerData.Name));
+  //     console.log("ln: ",latestNews);
+  //     // If there's no latest news, do nothing
+  //     if (!latestNews || latestNews.UpdatedStats.Overall === playerData.Overall) {
+  //       setArrow(dot);
+  //       return;
+  //     }
+  
+  //     // Determine whether to show the up arrow or the down arrow
+  //     if (latestNews.NewPrice < playerData.Price) {
+  //       setArrow(down);
+  //     } else {
+  //       setArrow(up);
+  //     }
+  //     setPlayerPrice(latestNews.NewPrice);
+  
+  //     // Update the player's data based on the latest news
+  //     const updatedPlayerData = { ...playerData, ...latestNews.UpdatedStats };
+  //     setPlayerData(updatedPlayerData);
+  //   }, 6000);
+  //   // console.log("chatgpt:",playerData)
+  //   return () => clearInterval(interval);
+  // }, [newsData]); // Run whenever playerData changes
+  
+  // useEffect(() => {
+  //   const filteredNews = newsData.filter(data => {
+  //     const newsTimestamp = new Date(data.timestamp).getTime();
+  //     const currentTime = new Date().getTime();
+  //     return currentTime >= newsTimestamp;
+  //   });
+
+  //   // Find the latest news affecting this player
+  //   const latestNews = filteredNews.find(news => news.PlayerAffected == playerData.Name);
+
+  //   // If there's no latest news, do nothing
+  //   if (!latestNews || latestNews.UpdatedStats.Overall === playerData.Overall) {
+  //     setArrow(dot);
+  //     return;
+  //   }
+  //   console.log(latestNews);
+  //   // Determine whether to show the up arrow or the down arrow
+  //   if (latestNews.NewPrice < playerData.Price) {
+  //     setArrow(down);
+  //   }else{
+  //     setArrow(up);
+  //   }
+  //   setPlayerPrice(latestNews.NewPrice);
+  //   // Update the player's data based on the latest news
+  //   const updatedPlayerData = { ...playerData, ...latestNews.UpdatedStats };
+  //   setPlayerData(updatedPlayerData);
+  //   // console.log("updated p d:",updatedPlayerData);
+
+  // }, [6000]); // Only re-run this effect when playerData changes
 
   let imgSrc;
   if (playerData.Image) {
@@ -60,7 +130,7 @@ function Player(props) {
     pos = 'GK';
   } else if (playerData.Position === 'Forward') {
     pos = 'FR';
-  } else if (playerData.Position === 'Mid Field') {
+  } else if (playerData.Position === 'Mid-Field') {
     pos = 'MF';
   }
 

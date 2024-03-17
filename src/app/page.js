@@ -2,13 +2,16 @@
 import React from 'react'
 import homeMbappe from '../assets/homoMbappe.png';
 import istenitklogo from '../assets/istenitk.png';
+import banner from '../assets/banner.jpeg';
+import mobileBanner from '../assets/mobileBanner.jpeg';
 import Image from 'next/image';
 
 export default function Home() {
   return (
     <div className=''>
 
-    <div className='hidden sm:flex border-[1px] border-white rounded-xl shadow-lg shadow-info'>
+    <div className='hidden sm:flex border-[1px] border-white rounded-xl shadow-lg shadow-info'
+    >
     <div className="card lg:card-side bg-base-100 shadow-xl">
     <div className='w-36 h-36 flex justify-center items-start bg-error rounded-full absolute top-10 -left-10'>     
     </div>
@@ -59,15 +62,15 @@ export default function Home() {
     <div className='sm:hidden flex flex-col justify-start items-center h-screen w-screen'>
         <div className='w-56 h-56 flex justify-center items-end bg-slate-200 rounded-3xl relative top-20'>   
             <Image 
-                src={homeMbappe}
-                height={224}
-                width={224}
+                src={mobileBanner}
+                // height={224}
+                // width={224}
                 alt='mbappe'
-                layout="responsive"
-                className='flex justify-center items-center object-fill'
+                // layout="responsive"
+                className='h-full w-full flex justify-center items-center rounded-xl object-cover object-center'
             />    
         </div>
-        <div className='w-16 h-16 flex justify-center items-start bg-slate-500 rounded-full relative right-28 bottom-32'>     
+        <div className='w-16 h-16 flex justify-center items-start bg-error rounded-full relative right-28 bottom-32'>     
         </div>
         <div className='flex flex-col w-full text-gray-600 justify-center font-extrabold text-5xl'>
             <p className='flex justify-start items-center w-full'>Football</p>

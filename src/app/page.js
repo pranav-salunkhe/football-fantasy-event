@@ -73,8 +73,8 @@ export default function Home() {
         <div className='w-16 h-16 flex justify-center items-start bg-error rounded-full relative right-28 bottom-32'>     
         </div>
         <div className='flex flex-col w-full text-gray-600 justify-center font-extrabold text-5xl'>
-            <p className='flex justify-start items-center w-full'>Football</p>
-            <p className='flex justify-center items-center w-full'>Fantasy 24</p>
+            <p className='flex justify-start items-center w-full'>ISTE</p>
+            <p className='flex justify-center items-center w-full'>Moneyball 24</p>
         </div>
         <div className='flex flex-col justify-center items-center p-4'>
             <div className='text-lg mt-4'><p>ISTE Credit Presents</p></div>

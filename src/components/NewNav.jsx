@@ -18,7 +18,7 @@ function NewNav() {
     </div>
   </div>
   <div className="navbar-center">
-    <a href='/' className="btn btn-ghost text-xl">ISTE Football Fantasy</a>
+    <a href='/' className="btn btn-ghost text-xl">ISTE Moneyball</a>
   </div>
   <div className="navbar-end">
     {/* <button className="btn btn-ghost btn-circle">

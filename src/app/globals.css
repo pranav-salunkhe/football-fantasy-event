@@ -1,7 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@font-face {
+  font-family: fifa;
+  src: url('../assets/voyagefantstraight.ttf');
+}
 
+
+/* *{
+  font-family: fifa;
+  letter-spacing: 0.5px;
+} */
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;

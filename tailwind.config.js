@@ -71,19 +71,19 @@ module.exports = {
           
           "primary": "#0066ff",
                    
-          "secondary": "#008400",
+          "secondary": "#ff70cf",
                    
           "accent": "#d1d5db",
                    
-          "neutral": "#1e1421",
+          "neutral": "#2b323c",
                    
-          "base-100": "#102735",
+          "base-100": "#1d232a",
                    
           "info": "#0058e1",
                    
-          "success": "#00bf5f",
+          "success": "#00ca92",
                    
-          "warning": "#996300",
+          "warning": "#47412e",
                    
           "error": "#fa5e72",
                    },

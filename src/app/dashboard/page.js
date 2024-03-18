@@ -9,6 +9,8 @@ export default function Dashboard() {
   const [positionFilter, setPositionFilter] = useState('');
   const [searchResults, setSearchResults] = useState([]);
   const [filterResults, setfilterResults] = useState([]);
+  const [sortOrder, setSortOrder] = useState('asc');
+
   let i = 0;
   let j = 1000;
   useEffect(() => {
@@ -33,10 +35,22 @@ export default function Dashboard() {
     setPositionFilter('');
     setSearchResults([]);
   };
+  const handleSort = () => {
+    const sortedResults = [...searchResults].sort((a, b) => {
+      if (sortOrder === 'asc') {
+        return a.Overall - b.Overall;
+      } else {
+        return b.Overall - a.Overall;
+      }
+    });
+
+    setSearchResults(sortedResults);
+    setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc');
+  };
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-4">
-      <div className="text-lg">Players Available</div>
-      <div className="flex flex-col sm:flex-row justify-evenly items-center">
+      <div className="text-lg text-success">Players Available</div>
+      <div className="flex flex-col sm:flex-row w-full justify-end items-center">
           <input
             type="text"
             value={searchTerm}
@@ -44,7 +58,7 @@ export default function Dashboard() {
             placeholder="Search player..."
             className="border m-2 border-gray-300 text-black rounded-md py-2 px-4 w-full sm:w-64"
           />
-          <div className="grid grid-cols-2 sm:grid-cols-4 items-center justify-center">
+          <div className="grid grid-cols-2 sm:grid-cols-5 items-center justify-center">
           <button
             onClick={handleSearch}
             className=" bg-blue-500 m-2 text-white px-4 py-2 rounded-md hover:bg-blue-600"
@@ -56,6 +70,12 @@ export default function Dashboard() {
             className=" bg-gray-500 m-2 text-white px-4 py-2 rounded-md hover:bg-gray-600"
           >
             Reset
+          </button>
+          <button
+            onClick={handleSort}
+            className="bg-yellow-500 m-2 text-white px-4 py-2 rounded-md hover:bg-yellow-600"
+          >
+            {sortOrder === 'asc' ? 'Sort ↑' : 'Sort ↓'}
           </button>
           <div className="">
           <select
@@ -80,7 +100,7 @@ export default function Dashboard() {
             </button>
           )}
         </div>
-          <p className="text-center">Entries:{searchResults.length}</p>
+          <p className="text-center rounded-md m-2 px-4 py-2 bg-success text-white">Entries:{searchResults.length}</p>
           </div>
 
       </div>

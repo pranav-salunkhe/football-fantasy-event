@@ -38,23 +38,25 @@ export default function Home() {
     
     </figure>
     <div className="card-body bg-base-300 rounded-r-xl">
-        <h2 className="card-title text-content-text">Get ready for something...!</h2>
+        <h2 className="card-title text-success">Things might get a little Messi!</h2>
         <p className='w-64 h-fit text-justify text-gray-600'>
-                    Some lorem ipsum text i am adding <span className='text-white'>anything</span> just to see how it looks. 
-                    This event is brought to you by <span className='text-white'>ISTE Credit&#8482;&nbsp;</span>.
-                    Give me <span className='text-white'>legit</span> text later to modify this shit.
+        <span className='text-white'>ISTE Credit&#8482;&nbsp;</span> presents, Moneyball! Navigate through the <span className='text-white'>competitve</span> world of football management as 
+                    you <span className='text-white'>buy</span>, <span className='text-white'>sell</span> and <span className='text-white'>negotiate</span> your way to sucess in
+                    the ultimate <span className='text-white'>Transfer Market</span> game.
+                    
         </p>
         <div className=' w-full h-full border-t-[1px] border-dashed border-white'>
-            <p className='pt-4 text-lg font-bold'>How to play?</p>
-            <ul className="steps steps-vertical">
-                <li className="step step-accent">Register</li>
-                <li className="step step-neutral step-accent">Choose plan</li>
-                <li className="step step-neutral">Purchase</li>
-                <li className="step step-neutral">Receive Product</li>
+            <p className='pt-4 text-lg font-bold text-success'>How to play?</p>
+            <ul className="steps steps-vertical text-gray-500">
+                <li className="step step-accent">Start with a default playing-11</li>
+                <li className="flex step step-neutral step-accent">Spreadsheets for buy/sell negotiations & trade.</li>
+                <li className="step step-neutral">Max 3 chances for negotiations</li>
+                {/* <li className="step step-neutral"></li> */}
             </ul>
         </div>
         <div className="card-actions justify-end">
         <a href='/dashboard' className="btn btn-primary">Dashboard</a>
+        <a href='/news' className="btn btn-secondary">News</a>
         </div>
     </div>
     </div>

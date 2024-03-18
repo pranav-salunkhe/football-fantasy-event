@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 function NewNav() {
   return (
-<div className="navbar bg-neutral">
+<div className="navbar bg-neutral text-success">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">

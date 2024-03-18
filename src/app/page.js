@@ -74,17 +74,17 @@ export default function Home() {
         </div>
         <div className='w-16 h-16 flex justify-center items-start bg-error rounded-full relative right-28 bottom-32'>     
         </div>
-        <div className='flex flex-col w-full text-gray-600 justify-center font-extrabold text-5xl'>
-            <p className='flex justify-start items-center w-full'>ISTE</p>
-            <p className='flex justify-center items-center w-full'>Moneyball 24</p>
+        <div className='flex flex-col w-full text-gray-600 justify-center  font-extrabold text-7xl'>
+            <p className='flex justify-center items-center w-full border-[1px]  skew-x-6 border-secondary bg-secondary'>ISTE</p>
+            <p className='flex justify-center items-center text-center border-[1px]  skew-y-6 border-error bg-error w-full'>Moneyball 24</p>
         </div>
         <div className='flex flex-col justify-center items-center p-4'>
-            <div className='text-lg mt-4'><p>ISTE Credit Presents</p></div>
+            <div className='text-lg mt-4 text-success font-bold'><p>ISTE Credit Presents</p></div>
             <div className=' text-center'>
                 <p className=' text-gray-600'>
-                    Some lorem ipsum text i am adding <span className='text-white'>anything</span> just to see how it looks. 
-                    This event is brought to you by <span className='text-white'>ISTE Credit&#8482;&nbsp;</span>.
-                    Give me <span className='text-white'>legit</span> text later to modify this shit.
+                <span className='text-white'>ISTE Credit&#8482;&nbsp;</span> presents, Moneyball! Navigate through the <span className='text-white'>competitve</span> world of football management as 
+                    you <span className='text-white'>buy</span>, <span className='text-white'>sell</span> and <span className='text-white'>negotiate</span> your way to sucess in
+                    the ultimate <span className='text-white'>Transfer Market</span> game.
                 </p>
             </div>
         </div>

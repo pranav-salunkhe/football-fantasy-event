@@ -83,7 +83,7 @@ export default function Dashboard() {
             onChange={e => setPositionFilter(e.target.value)}
             className="border m-2 border-gray-300 text-black rounded-md py-2 px-4"
           >
-            <option value="">Filter by Position</option>
+            <option value="">Filter</option>
             <option value="Goal Keeper">Goal Keeper</option>
             <option value="Defender">Defender</option>
             <option value="Mid-Field">Mid-Field</option>

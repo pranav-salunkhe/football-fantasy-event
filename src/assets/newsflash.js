@@ -65,7 +65,7 @@ const newsData = [
         },
         "NewPrice": 688500,
         "StatBoost": 0,
-        "timestamp": "2024-03-18T19:45:00",
+        "timestamp": "2024-03-18T19:55:00",
     },
     {
         "Title": "Hazard being hazardous",
@@ -82,7 +82,7 @@ const newsData = [
         },
         "NewPrice": 691000,
         "StatBoost": 0,
-        "timestamp": "2024-03-18T19:45:00",
+        "timestamp": "2024-03-18T19:55:00",
     },
     {
         "Title": "skip",
@@ -99,7 +99,7 @@ const newsData = [
         },
         "NewPrice": 779500,
         "StatBoost": 0,
-        "timestamp": "2024-03-18T19:45:00",
+        "timestamp": "2024-03-18T19:55:00",
     },
     {
         "Title": "Mbappe XOR Donnaruma",
@@ -116,7 +116,7 @@ const newsData = [
         },
         "NewPrice": 779500,
         "StatBoost": 0,
-        "timestamp": "2024-03-18T19:45:00",
+        "timestamp": "2024-03-18T19:55:00",
     },
     {
         "Title": "Mbappe is slacking",
@@ -133,7 +133,7 @@ const newsData = [
         },
         "NewPrice": 779500,
         "StatBoost": 0,
-        "timestamp": "2024-03-18T20:15:00",
+        "timestamp": "2024-03-18T20:25:00",
     },
     {
         "Title": "Get this man a striker",
@@ -150,7 +150,7 @@ const newsData = [
         },
         "NewPrice": 779500,
         "StatBoost": 0,
-        "timestamp": "2024-03-18T20:15:00",
+        "timestamp": "2024-03-18T20:25:00",
     },
     {
         "Title": "Beware of the sanctions!",
@@ -167,7 +167,7 @@ const newsData = [
         },
         "NewPrice": 779500,
         "StatBoost": 0,
-        "timestamp": "2024-03-18T20:15:00",
+        "timestamp": "2024-03-18T20:25:00",
     },
     {
         "Title": "Explosive Rice!",
@@ -184,7 +184,7 @@ const newsData = [
         },
         "NewPrice": 828000,
         "StatBoost": 0,
-        "timestamp": "2024-03-18T20:15:00",
+        "timestamp": "2024-03-18T20:25:00",
     }
 
 ]

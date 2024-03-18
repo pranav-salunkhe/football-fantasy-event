@@ -3,7 +3,9 @@ import React from 'react'
 import homeMbappe from '../assets/homoMbappe.png';
 import istenitklogo from '../assets/istenitk.png';
 import banner from '../assets/banner.jpeg';
+import football from '../assets/football.png'
 import mobileBanner from '../assets/mobileBanner.jpeg';
+import fifabg from '../assets/fifa-bg.jpeg';
 import Image from 'next/image';
 
 export default function Home() {
@@ -13,9 +15,15 @@ export default function Home() {
     <div className='hidden sm:flex border-[1px] border-white rounded-xl shadow-lg shadow-info'
     >
     <div className="card lg:card-side bg-base-100 shadow-xl">
-    <div className='w-36 h-36 flex justify-center items-start bg-error rounded-full absolute top-10 -left-10'>     
+    <div className='w-36 h-36 flex justify-center items-start bg-error z-10 rounded-full absolute top-10 -left-10'>     
+        {/* <Image
+        
+            src={football}
+            alt="Album"
+            className='h-full w-full rounded-full object-cover'
+        /> */}
     </div>
-    <div className='w-16 h-16 flex justify-center items-start bg-accent rounded-full absolute top-4 left-8'>     
+    <div className='w-16 h-16 flex justify-center items-start bg-accent z-10 rounded-full absolute top-4 left-8'>     
     </div>
     {/* <div className="mockup-phone absolute scale-75 rotate-12 top-24 right-80">
             <div className="camera"></div> 
@@ -29,11 +37,11 @@ export default function Home() {
     
         <Image
          src={homeMbappe} 
-         height={512} 
-         width={512} 
-        layout='responsive'
+        //  height={1200} 
+        //  width={900} 
+        // layout='responsive'
          alt="Album"
-         className=''
+         className='h-[560px] w-[800px] rounded-l-xl object-cover'
          />
     
     </figure>

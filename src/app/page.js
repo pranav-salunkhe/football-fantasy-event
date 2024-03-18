@@ -74,9 +74,9 @@ export default function Home() {
         </div>
         <div className='w-16 h-16 flex justify-center items-start bg-error rounded-full relative right-28 bottom-32'>     
         </div>
-        <div className='flex flex-col w-full text-gray-600 justify-center  font-extrabold text-7xl'>
-            <p className='flex justify-center items-center w-full border-[1px]  skew-x-6 border-secondary bg-secondary'>ISTE</p>
-            <p className='flex justify-center items-center text-center border-[1px]  skew-y-6 border-error bg-error w-full'>Moneyball 24</p>
+        <div className='flex flex-col w-full text-gray-600 justify-center  text-7xl'>
+            <p className='flex justify-center items-center w-full border-[1px]  skew-x-6 border-secondary bg-secondary' style={{fontWeight:800}}>ISTE</p>
+            <p className='flex justify-center items-center text-center border-[1px]  skew-y-6 border-error bg-error w-full' style={{fontWeight:800}}>Moneyball 24</p>
         </div>
         <div className='flex flex-col justify-center items-center p-4'>
             <div className='text-lg mt-4 text-success font-bold'><p>ISTE Credit Presents</p></div>

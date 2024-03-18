@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import fifaPlayers from "@/data/fifaPlayers";
 import Player from "../../components/Player";
-import ks from '../../assets/DSC_1478.JPG';
+import ks from "./DSC_1478.png";
 
 export default function Dashboard() {
   // console.log(fifaPlayers[0])
@@ -26,7 +26,7 @@ export default function Dashboard() {
     "Defence": 100,
     "Physical": 100,
     "Price": 696969,
-    "Image": "https://drive.google.com/file/d/1s9TJmxnZG2RqB-QkzK-P6qcV-ec_ndia/view?usp=share_link"
+    "Image": "https://drive.google.com/uc?export=download&id=1s9TJmxnZG2RqB-QkzK-P6qcV-ec_ndia"
   };
   let i = 0;
   let j = 1000;
@@ -159,13 +159,13 @@ export default function Dashboard() {
           </div>
           
         </div>
-        <img
-          src='../../assets/DSC_1478.JPG'
+        <Image
+          src={ks}
           alt='player'
           // layout="responsive"
           // height={100}
           // width={100}
-          className='h-full w-full object-fill'
+          className=' h-80 w-full object-fill'
 
         />
       </div>

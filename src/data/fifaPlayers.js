@@ -685,7 +685,7 @@ const poolOfPlayers = [
     "Defence": 48,
     "Physical": 73,
     "Price": 817000,
-    "Image": "https://media.contentapi.ea.com/content/dam/ea/fifa/fifa-23/ratings/common/player-small-portraits/239053.png"
+    "Image": "https://cdn.futbin.com/content/fifa20/img/players/235805.png?v=23"
   },
   {
     "Name": "Ferland Mendy",

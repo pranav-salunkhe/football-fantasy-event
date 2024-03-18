@@ -90,7 +90,7 @@ export default function Home() {
             <div className='text-lg mt-4 text-success font-bold'><p>ISTE Credit Presents</p></div>
             <div className=' text-center'>
                 <p className=' text-gray-600'>
-                <span className='text-white'>ISTE Credit&#8482;&nbsp;</span> presents, Moneyball! Navigate through the <span className='text-white'>competitve</span> world of football management as 
+                    Moneyball! Navigate through the <span className='text-white'>competitve</span> world of football management as 
                     you <span className='text-white'>buy</span>, <span className='text-white'>sell</span> and <span className='text-white'>negotiate</span> your way to sucess in
                     the ultimate <span className='text-white'>Transfer Market</span> game.
                 </p>

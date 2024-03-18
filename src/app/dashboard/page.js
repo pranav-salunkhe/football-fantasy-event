@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import fifaPlayers from "@/data/fifaPlayers";
 import Player from "../../components/Player";
+import ks from '../../assets/DSC_1478.JPG';
+
 export default function Dashboard() {
   // console.log(fifaPlayers[0])
   const [searchTerm, setSearchTerm] = useState('');
@@ -10,7 +12,22 @@ export default function Dashboard() {
   const [searchResults, setSearchResults] = useState([]);
   const [filterResults, setfilterResults] = useState([]);
   const [sortOrder, setSortOrder] = useState('asc');
+  const kishlay =   {
+    "Name": "Kishlay Singh",
+    "Nationality": "Indian",
+    "Club": "ISTE",
+    "Position": "Forward",
 
+    "Overall": 85,
+    "Pace": 100,
+    "Shooting": 100,
+    "Passing": 100,
+    "Dribbling": 100,
+    "Defence": 100,
+    "Physical": 100,
+    "Price": 696969,
+    "Image": "https://drive.google.com/file/d/1s9TJmxnZG2RqB-QkzK-P6qcV-ec_ndia/view?usp=share_link"
+  };
   let i = 0;
   let j = 1000;
   useEffect(() => {
@@ -108,7 +125,7 @@ export default function Dashboard() {
       <div className=" grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-4 gap-y-4 md:gap-x-12 md:gap-y-12">
         {filterResults.length > 0 ? (
           filterResults.map((player, index) => (
-            <Player key={player.Name} playerData={player} index={index} />
+            <Player key={player.Name} kishlay={player} index={index} />
           ))
         ) : (
           <></>
@@ -133,6 +150,79 @@ export default function Dashboard() {
             index={index}
           />
         ))}
+        <div className="m-2 bg-neutral rounded-tr-badge rounded-bl-badge shadow-md shadow-warning rounded-lg flex flex-col justify-center items-center border border-white w-36 h-max sm:h-64 sm:w-60 md:h-max md:w-72">
+      <div className='h-full w-full '>
+        <div className='flex w-36 sm:w-60 md:w-72 p-2 md:p-4 justify-between absolute'>
+          <div className=' flex flex-col justify-between items-center text-sm sm:text-md md:text-lg lg:text-xl '>
+            <div className='text-secondary'>{kishlay.Overall}</div>
+            <div className="badge badge-secondary">{kishlay.Position}</div>
+          </div>
+          
+        </div>
+        <img
+          src='../../assets/DSC_1478.JPG'
+          alt='player'
+          // layout="responsive"
+          // height={100}
+          // width={100}
+          className='h-full w-full object-fill'
+
+        />
+      </div>
+      <div className="font-bold text-sm lg:text-xl text-accent">{kishlay.Name}</div>
+      <div className='flex flex-row w-full h-full justify-evenly items-center'>
+        <div className='flex flex-col'>
+          <div className='border-b-[1px] border-gray-500 text-secondary'>{kishlay.Pace} <span className='opacity-30'>PAC</span></div>
+          <div className='border-b-[1px] border-gray-500 text-secondary'>{kishlay.Shooting} <span className='opacity-30'>SHO</span></div>
+          <div className='border-b-[1px] border-gray-500 text-secondary'>{kishlay.Passing} <span className='opacity-30'>PAS</span></div>
+        </div>
+        {/* <div className="stats stats-vertical shadow">
+  
+        <div className="stat px-2 py-1">
+          <div className="stat-title">PAC</div>
+          <div className="stat-value">{kishlay.Pace} </div>
+        </div>
+        
+        <div className="stat px-2 py-1">
+          <div className="stat-title">SHO</div>
+          <div className="stat-value">{kishlay.Shooting} </div>
+        </div>
+        
+        <div className="stat px-2 py-1">
+          <div className="stat-title">PAS</div>
+          <div className="stat-value">{kishlay.Passing} </div>
+        </div>
+        
+      </div> */}
+        <div className="divider lg:divider-horizontal"></div> 
+        <div className='flex flex-col'>
+          <div className='border-b-[1px] border-gray-500 text-secondary'>{kishlay.Dribbling} <span className='opacity-30'>DRI</span></div>
+          <div className='border-b-[1px] border-gray-500 text-secondary'>{kishlay.Defence} <span className='opacity-30'>DEF</span></div>
+          <div className='border-b-[1px] border-gray-500 text-secondary'>{kishlay.Physical} <span className='opacity-30'>PHY</span></div>
+        </div>
+        {/* <div className="stats stats-vertical shadow">
+  
+        <div className="stat px-2 py-1">
+          <div className="stat-title">DRI</div>
+          <div className="stat-value">{kishlay.Dribbling} </div>
+        </div>
+        
+        <div className="stat px-2 py-1">
+          <div className="stat-title">DEF</div>
+          <div className="stat-value">{kishlay.Defence} </div>
+        </div>
+        
+        <div className="stat px-2 py-1">
+          <div className="stat-title">PHY</div>
+          <div className="stat-value">{kishlay.Physical} </div>
+        </div>
+        
+        </div> */}
+      </div>
+      <div className='m-2 p-2 rounded-xl bg-success'>
+        $ {Math.floor(kishlay.Price)}
+      </div>
+    </div>
       </div>
     </main>
   );

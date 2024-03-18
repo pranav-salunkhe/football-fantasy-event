@@ -2685,7 +2685,7 @@ const poolOfPlayers = [
     "Defence": 91,
     "Physical": 86,
     "Price": 806400,
-    "Image": "https://media.contentapi.ea.com/content/dam/ea/fifa/fifa-23/ratings/common/player-headshots/203376.png"
+    "Image": "https://cdn.fifacm.com/content/media/imgs/fifa22/players/p203376.png?v=22"
   },
   {
     "Name": "WISSAMBEN YEDDER",

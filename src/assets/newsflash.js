@@ -2,7 +2,7 @@ const newsData = [
     {
         "Title": "Park The Bus",
         "PlayerAffected": "noplayer",
-        "Description": "Jose Mourinho wants to continue his football heritage and wants to follow his park the bus tactic by getting defenders from his previous teams (inter milan, porto ,spurs ,united,chelsea,madrid)",
+        "Description": "But back to Mourinho's tactical genius: his plan to assemble a dream team of defenders from his former clubs is certainly intriguing. Imagine the banter in the locker room as players from Inter Milan, Porto, Spurs, United, Chelsea, and Madrid come together under the Special One's banner once more. And while Mourinho works his magic on the defensive end, did you know that in Japan, there's a hotel staffed entirely by robots?",
         "UpdatedStats": {
             "Overall": 0,
             "Pace": 0,
@@ -14,7 +14,7 @@ const newsData = [
         },
         "NewPrice": 0,
         "StatBoost": 0,
-        "timestamp": "2024-03-18T18:00:00",
+        "timestamp": "2024-03-18T19:15:00",
     },
     {
         "Title": "A Solid Core",
@@ -31,7 +31,7 @@ const newsData = [
         },
         "NewPrice": 0,
         "StatBoost": 0,
-        "timestamp": "2024-03-18T18:00:00",
+        "timestamp": "2024-03-18T19:15:00",
     },
     {
         "Title": "Off they go",
@@ -48,7 +48,7 @@ const newsData = [
         },
         "NewPrice": 0,
         "StatBoost": 0,
-        "timestamp": "2024-03-18T18:00:00",
+        "timestamp": "2024-03-18T19:15:00",
     },
     {
         "Title": "Divorce, the worst",
@@ -65,7 +65,7 @@ const newsData = [
         },
         "NewPrice": 688500,
         "StatBoost": 0,
-        "timestamp": "2024-03-18T18:30:00",
+        "timestamp": "2024-03-18T19:45:00",
     },
     {
         "Title": "Hazard being hazardous",
@@ -82,7 +82,7 @@ const newsData = [
         },
         "NewPrice": 691000,
         "StatBoost": 0,
-        "timestamp": "2024-03-18T18:30:00",
+        "timestamp": "2024-03-18T19:45:00",
     },
     {
         "Title": "skip",
@@ -99,7 +99,7 @@ const newsData = [
         },
         "NewPrice": 779500,
         "StatBoost": 0,
-        "timestamp": "2024-03-18T18:30:00",
+        "timestamp": "2024-03-18T19:45:00",
     },
     {
         "Title": "Mbappe XOR Donnaruma",
@@ -116,7 +116,7 @@ const newsData = [
         },
         "NewPrice": 779500,
         "StatBoost": 0,
-        "timestamp": "2024-03-18T18:30:00",
+        "timestamp": "2024-03-18T19:45:00",
     },
     {
         "Title": "Mbappe is slacking",
@@ -133,7 +133,7 @@ const newsData = [
         },
         "NewPrice": 779500,
         "StatBoost": 0,
-        "timestamp": "2024-03-18T19:00:00",
+        "timestamp": "2024-03-18T20:15:00",
     },
     {
         "Title": "Get this man a striker",
@@ -150,7 +150,7 @@ const newsData = [
         },
         "NewPrice": 779500,
         "StatBoost": 0,
-        "timestamp": "2024-03-18T19:00:00",
+        "timestamp": "2024-03-18T20:15:00",
     },
     {
         "Title": "Beware of the sanctions!",
@@ -167,7 +167,7 @@ const newsData = [
         },
         "NewPrice": 779500,
         "StatBoost": 0,
-        "timestamp": "2024-03-18T19:00:00",
+        "timestamp": "2024-03-18T20:15:00",
     },
     {
         "Title": "Explosive Rice!",
@@ -184,7 +184,7 @@ const newsData = [
         },
         "NewPrice": 828000,
         "StatBoost": 0,
-        "timestamp": "2024-03-18T19:00:00",
+        "timestamp": "2024-03-18T20:15:00",
     }
 
 ]

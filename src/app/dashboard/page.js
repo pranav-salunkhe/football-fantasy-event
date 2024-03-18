@@ -165,7 +165,7 @@ export default function Dashboard() {
           // layout="responsive"
           // height={100}
           // width={100}
-          className=' h-80 w-full object-fill'
+          className=' h-80 w-full object-fill rounded-tr-badge rounded-tl-xl'
 
         />
       </div>
